@@ -1,4 +1,5 @@
 AR = /usr/bin/ar
+RANLIB = /usr/bin/ranlib
 CXX = /usr/bin/g++
 TAR = /usr/bin/tar
 UPLOAD = /usr/bin/scp
@@ -20,6 +21,7 @@ all: $(LIBRARY)
 
 $(LIBRARY): $(OBJECTS)
 	$(AR) cru $(LIBRARY) $(OBJECTS)
+	$(RANLIB) $(LIBRARY)
 
 Build/%.o: %.cpp
 	$(CXX) $(IPATHS) $(WFLAGS) $(CFLAGS) -c $< -o $@
