@@ -1,21 +1,6 @@
-CXX = 'g++ -g -Os -Wall -W -Wno-unused-parameter -Wnewline-eof -Werror'
+require 'rbuild-cfamily.rb'
 
-def cxx_dependencies(source_file)
-    `#{CXX} -MM #{source_file}`.gsub(/\\/, '').split(' ')[1..-1]
-end
+objects = build_objects(:sources => Dir['*.cpp'])
 
-objects = Dir['*.cpp'].collect do |source_file|
-    object_file = source_file.sub(/(.*).cpp/, 'Build/\1.o')
-
-    build(:targets => [object_file],
-          :dependencies => cxx_dependencies(source_file),
-          :command => "#{CXX} -c #{source_file} -o #{object_file}",
-          :message => "Compiling #{source_file}")
-          
-    object_file
-end
-
-build(:targets => ['libCppUnitLite.a'],
-      :dependencies => objects,
-      :command => "ar cru libCppUnitLite.a #{objects.join(' ')}; ranlib libCppUnitLite.a",
-      :message => "Creating Archive libCppUnitLite.a")
+build_archive(:archive => 'libCppUnitLite.a',
+              :objects => objects)
