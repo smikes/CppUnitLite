@@ -15,7 +15,7 @@ objects = Dir['*.cpp'].collect do |source_file|
     object_file
 end
 
-build(:targets => ['libOSML.a'],
+build(:targets => ['libCppUnitLite.a'],
       :dependencies => objects,
-      :command => "ar cru libOSML.a #{objects.join(' ')}; ranlib libOSML.a",
-      :message => "Creating Archive libOSML.a")
+      :command => "ar cru libCppUnitLite.a #{objects.join(' ')}; ranlib libCppUnitLite.a",
+      :message => "Creating Archive libCppUnitLite.a")
