@@ -18,6 +18,7 @@ class TestResult
 {
 public:
 					TestResult (); 
+    virtual         ~TestResult () {}
 	virtual void	testsStarted ();
 	virtual void	addFailure (const Failure& failure);
 	virtual void	testsEnded ();
