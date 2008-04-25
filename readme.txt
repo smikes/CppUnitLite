@@ -6,4 +6,6 @@ I've modified it to build without errors under strict GCC warning settings, and 
 
 In the absence of any license on the original, I'm placing my modified version under the zlib/libpng license.  See license.txt for details.
 
+Makefile (replacing build.rb) provided by Tang Xinfa.
+
 Problems?  Suggestions?  Contact Keith Bauer (OneSadCookie@gmail.com).
