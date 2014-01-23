@@ -32,7 +32,7 @@ SimpleString SimpleString::operator= (const SimpleString& other)
 {
 	delete buffer;
 	buffer = new char [other.size() + 1];
-	strcpy(buffer, other.buffer);	
+	strcpy(buffer, other.buffer);
 	return *this;
 }
 
@@ -44,7 +44,7 @@ char *SimpleString::asCharString () const
 
 int SimpleString::size() const
 {
-	return strlen (buffer);
+	return static_cast<int>(strlen (buffer));
 }
 
 SimpleString::~SimpleString ()
@@ -91,5 +91,3 @@ SimpleString StringFrom (const SimpleString& value)
 {
 	return SimpleString(value);
 }
-
-
