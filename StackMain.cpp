@@ -1,4 +1,4 @@
-#include "CppUnitLite\TestHarness.h"
+#include "CppUnitLite/TestHarness.h"
 
 int main()
 {
