@@ -5,11 +5,14 @@
       "target_name": "CppUnitLite",
       "type": "static_library",
       "sources": [
-         "Failure.cpp",
-         "SimpleString.cpp",
-         "Test.cpp",
-         "TestResult.cpp",
-         "TestRegistry.cpp"
+         "src/Failure.cpp",
+         "src/SimpleString.cpp",
+         "src/Test.cpp",
+         "src/TestResult.cpp",
+         "src/TestRegistry.cpp"
+      ],
+      "include_dirs": [
+         "./CppUnitLite"
       ]
     },
   ]
