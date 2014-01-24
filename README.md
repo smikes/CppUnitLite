@@ -1,3 +1,5 @@
+# CppUnitLite - lite c++ testing framework
+
 This is a modified version of CppUnitLite
 
 Original version from Michael Feathers
