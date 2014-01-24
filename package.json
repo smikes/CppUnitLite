@@ -1,6 +1,6 @@
 {
   "name": "cppunitlite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "C++ unit testing library",
   "main": "include_dirs.js",
   "scripts": {
