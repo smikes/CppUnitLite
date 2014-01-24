@@ -1,7 +1,8 @@
 {
-  "name": "CppUnitLite",
+  "name": "cppunitlite",
   "version": "0.0.1",
   "description": "C++ unit testing library",
+  "main": "include_dirs.js",
   "scripts": {
     "install": "node-gyp rebuild",
     "test": "echo \"Error: no test specified\" && exit 1"
