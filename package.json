@@ -1,0 +1,25 @@
+{
+  "name": "CppUnitLite",
+  "version": "0.0.0",
+  "description": "C++ unit testing library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smikes/CppUnitLite.git"
+  },
+  "keywords": [
+    "c++",
+    "unit",
+    "test",
+    "tdd"
+  ],
+  "author": "Michael Feathers",
+  "license": "zlib",
+  "bugs": {
+    "url": "https://github.com/smikes/CppUnitLite/issues"
+  },
+  "homepage": "https://github.com/smikes/CppUnitLite"
+}
