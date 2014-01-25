@@ -5,7 +5,7 @@
   "main": "include_dirs.js",
   "scripts": {
     "install": "node-gyp rebuild",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "build/Release/test"
   },
   "repository": {
     "type": "git",
