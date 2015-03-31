@@ -33,7 +33,7 @@ Add a test target to your binding.gyp:
       ]
       'include_dirs': [
         # your project include files
-        '<!(node -e "require(\'cpppunitlite\')'")>
+        '<!(node -e "require(\'cpppunitlite\')")>'
       ]
       'dependencies': [
         'node_modules/cppunitlite/binding.gyp:CppUnitLite'
