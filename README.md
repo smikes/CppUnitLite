@@ -25,20 +25,32 @@ requires node-gyp to be installed and working.
 
 Add a test target to your binding.gyp:
 
+```
     {
-      'target_name': 'test',
-      'type': 'executable',
-      'sources': [
-        # your test files
-      ]
-      'include_dirs': [
-        # your project include files
-        '<!(node -e "require(\'cppunitlite\')")>'
-      ]
-      'dependencies': [
-        'node_modules/cppunitlite/binding.gyp:CppUnitLite'
-      ]
+      "target_name": "test",
+      "type": "executable",
+      "sources": [
+          # test filenames
+      ],
+      "include_dirs": [
+        ".",
+        "src",
+        "<!(node -e \"require('cppunitlite')\")",
+        "<!(node -e \"require('nan')\")"
+      ],
+      "dependencies": [
+        "node_modules/cppunitlite/binding.gyp:CppUnitLite",
+      ],
+      "conditions": [
+        ['OS=="win"', {
+          }, {
+            'cflags_cc': [ '-fexceptions' ]
+          }
+        ]
+      ],
+      # sample unit test
     }
+```
 
 ### A test main
 
