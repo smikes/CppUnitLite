@@ -44,5 +44,5 @@ Failure::Failure (const SimpleString&	theTestName,
 
 	message = SimpleString(stage);
 
-	delete stage;
+	delete[] stage;
 }
